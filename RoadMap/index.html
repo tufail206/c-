@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Learning Guide - C++</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4ca1af;
+        }
+        
+        h3 {
+            color: #3498db;
+            margin: 15px 0 10px;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .phase {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .phase-number {
+            display: inline-block;
+            background: #4ca1af;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .resource-card {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .tip {
+            background: #fff4e6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #e67e22;
+        }
+        
+        .code-example {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .roadmap, .resources-grid, .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Learning Data Structures & Algorithms in C++</h1>
+            <p class="subtitle">A comprehensive roadmap to master DSA using C++ programming language</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="content-left">
+                <div class="card">
+                    <h2>Why Learn DSA with C++?</h2>
+                    <p>C++ is an excellent choice for learning Data Structures and Algorithms because:</p>
+                    <ul>
+                        <li>It provides low-level memory control which helps understand how data structures work internally</li>
+                        <li>High performance compared to many other languages</li>
+                        <li>Widely used in competitive programming and technical interviews</li>
+                        <li>Strong Standard Template Library (STL) with built-in data structures and algorithms</li>
+                        <li>Industry relevance in game development, high-frequency trading, and system programming</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>Learning Roadmap</h2>
+                    <div class="roadmap">
+                        <div class="phase">
+                            <h3><span class="phase-number">1</span> Foundation</h3>
+                            <ul>
+                                <li>C++ Basics (syntax, data types, loops)</li>
+                                <li>Functions and Recursion</li>
+                                <li>Pointers and Memory Management</li>
+                                <li>Object-Oriented Programming Concepts</li>
+                                <li>Standard Template Library (STL) basics</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase">
+                            <h3><span class="phase-number">2</span> Basic Data Structures</h3>
+                            <ul>
+                                <li>Arrays and Strings</li>
+                                <li>Linked Lists (Singly, Doubly, Circular)</li>
+                                <li>Stacks and Queues</li>
+                                <li>Hash Tables (Unordered Maps/Sets)</li>
+                                <li>Basic Time and Space Complexity Analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase">
+                            <h3><span class="phase-number">3</span> Algorithms & Problem Solving</h3>
+                            <ul>
+                                <li>Searching Algorithms (Linear, Binary)</li>
+                                <li>Sorting Algorithms (Bubble, Selection, Insertion, Merge, Quick)</li>
+                                <li>Basic Graph Algorithms (BFS, DFS)</li>
+                                <li>Tree Traversals (Inorder, Preorder, Postorder)</li>
+                                <li>Introduction to Greedy Algorithms</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase">
+                            <h3><span class="phase-number">4</span> Advanced Concepts</h3>
+                            <ul>
+                                <li>Trees (BST, AVL, Heaps)</li>
+                                <li>Graph Algorithms (Dijkstra, MST, Topological Sort)</li>
+                                <li>Dynamic Programming</li>
+                                <li>Backtracking Algorithms</li>
+                                <li>Advanced STL usage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Recommended Resources</h2>
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <h3>Books</h3>
+                            <ul>
+                                <li>Introduction to Algorithms (CLRS)</li>
+                                <li>Data Structures and Algorithms in C++ (Adam Drozdek)</li>
+                                <li>C++ Primer (Stanley Lippman)</li>
+                                <li>Effective Modern C++ (Scott Meyers)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <h3>Online Courses</h3>
+                            <ul>
+                                <li>Algorithms Specialization (Coursera - Stanford)</li>
+                                <li>Data Structures and Algorithms (Udemy)</li>
+                                <li>MIT OpenCourseWare (Introduction to Algorithms)</li>
+                                <li>GeeksforGeeks DSA Self-Paced Course</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <h3>Practice Platforms</h3>
+                            <ul>
+                                <li>LeetCode</li>
+                                <li>HackerRank</li>
+                                <li>CodeChef</li>
+                                <li>Codeforces</li>
+                                <li>GeeksforGeeks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-right">
+                <div class="card">
+                    <h2>Quick C++ DSA Example</h2>
+                    <div class="code-example">
+                        <pre><code>#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+// Binary Search implementation
+int binarySearch(const vector<int>& arr, int target) {
+    int left = 0, right = arr.size() - 1;
+    
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        
+        if (arr[mid] == target)
+            return mid;
+        else if (arr[mid] < target)
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+    
+    return -1;
+}
+
+int main() {
+    vector<int> numbers = {2, 5, 8, 12, 16, 23, 38, 45, 67};
+    int target = 23;
+    
+    int result = binarySearch(numbers, target);
+    
+    if (result != -1)
+        cout << "Element found at index: " << result << endl;
+    else
+        cout << "Element not found in the array" << endl;
+        
+    return 0;
+}</code></pre>
+                    </div>
+                    <p>This example demonstrates a binary search algorithm implemented in C++ using vectors from the STL.</p>
+                </div>
+                
+                <div class="card">
+                    <h2>Essential Tips</h2>
+                    <div class="tips-grid">
+                        <div class="tip">
+                            <h3>Practice Consistently</h3>
+                            <p>Code daily, even if it's just for 30 minutes. Consistency is key to mastering DSA.</p>
+                        </div>
+                        
+                        <div class="tip">
+                            <h3>Understand, Don't Memorize</h3>
+                            <p>Focus on understanding the underlying principles rather than memorizing solutions.</p>
+                        </div>
+                        
+                        <div class="tip">
+                            <h3>Start Simple</h3>
+                            <p>Begin with basic problems and gradually increase difficulty level.</p>
+                        </div>
+                        
+                        <div class="tip">
+                            <h3>Learn Complexity Analysis</h3>
+                            <p>Understand time and space complexity (Big O notation) to evaluate algorithm efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Time Complexity Chart</h2>
+                    <ul>
+                        <li><strong>O(1)</strong> - Constant Time (Best)</li>
+                        <li><strong>O(log n)</strong> - Logarithmic Time (Excellent)</li>
+                        <li><strong>O(n)</strong> - Linear Time (Good)</li>
+                        <li><strong>O(n log n)</strong> - Linearithmic Time (Fair)</li>
+                        <li><strong>O(n²)</strong> - Quadratic Time (Poor)</li>
+                        <li><strong>O(2ⁿ)</strong> - Exponential Time (Worst)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Remember: Learning DSA is a marathon, not a sprint. Be patient with yourself and celebrate small victories!</p>
+            <p>© 2023 DSA Learning Guide | Created for C++ Developers</p>
+        </footer>
+    </div>
+</body>
+</html>
