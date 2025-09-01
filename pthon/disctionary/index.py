@@ -20,7 +20,9 @@ print(favBook.keys()) #it will return only the key
 print(favBook.values()) #it will return only the values
 
 print(favBook["book1"]) # in BigO 1 it will return the value Math
-
+print(favBook.get("book1")) # if not pr
+print(favBook["book10"]) # it will return error
+print(favBook.get("book10")) # if not preset it will return none
 urdu_to_english = {
     "madad": "help",
     "kitab": "book",
