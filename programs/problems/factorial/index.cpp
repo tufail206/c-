@@ -9,4 +9,8 @@ int main(){
         fact=fact*i;
     }
     cout<<"Factorial of "<<x<<" = "<<fact;
+   
 }
+
+
+
